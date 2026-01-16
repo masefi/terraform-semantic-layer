@@ -4,7 +4,8 @@ locals {
     "bigquery.googleapis.com",        # BigQuery
     "artifactregistry.googleapis.com", # Artifact Registry
     "run.googleapis.com",             # Cloud Run
-    "iam.googleapis.com"              # IAM
+    "iam.googleapis.com",              # IAM
+    "cloudbuild.googleapis.com"        # Cloud Build
   ]
 }
 
