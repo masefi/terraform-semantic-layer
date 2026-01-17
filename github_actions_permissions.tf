@@ -1,10 +1,20 @@
 locals {
   github_actions_roles = [
+    # BigQuery permissions (for dbt)
     "roles/bigquery.dataEditor",
     "roles/bigquery.jobUser",
-    "roles/artifactregistry.writer",
+    
+    # Cloud Run deployment permissions
     "roles/run.admin",
-    "roles/iam.serviceAccountUser"
+    "roles/iam.serviceAccountUser",
+    
+    # Container build & storage permissions
+    "roles/artifactregistry.writer",
+    "roles/storage.admin",
+    "roles/cloudbuild.builds.editor",
+    
+    # Service usage (required for Cloud Build)
+    "roles/serviceusage.serviceUsageConsumer",
   ]
 }
 
